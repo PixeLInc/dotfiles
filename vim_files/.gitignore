@@ -1,0 +1,13 @@
+# Vim Stuff
+*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+plugged/
+backup/
+autoload/
+undo/
+swap/
+.viminfo
