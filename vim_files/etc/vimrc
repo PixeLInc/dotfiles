@@ -77,7 +77,11 @@ set backupdir-=.
 set backupdir=$HOME/.vim/backup/
 
 " put the viminfo file in ~/.vim
-set viminfo+=n$HOME/.vim/.viminfo
+if !has('nvim')
+  set viminfo+=n$HOME/.vim/.viminfo
+else
+
+endif
 
 " configure a custom spellfile
 set spellfile=$HOME/.vim-spell-en.utf-8.add
