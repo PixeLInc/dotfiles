@@ -1,5 +1,17 @@
 call plug#begin($HOME . '/.vim/plugged')
 
+" Neovim
+if has('nvim')
+  " Autocompletion plugin
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+  " Language plugins for deoplete
+  Plug 'zchee/deoplete-jedi' " Python
+  Plug 'sebastianmarkow/deoplete-rust' " Rust
+
+
+endif
+
 " dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tpope/vim-projectionist'
@@ -21,6 +33,7 @@ Plug 'NLKNguyen/c-syntax.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'elorest/vim-slang'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'JesseKPhillips/d.vim'
 
 " ruby on rails
 Plug 'thoughtbot/vim-rspec'
@@ -31,6 +44,7 @@ Plug 'tpope/vim-rake'
 
 " front end web development
 Plug 'jelera/vim-javascript-syntax'
+Plug 'mxw/vim-jsx'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'elzr/vim-json'
 Plug 'kchmck/vim-coffee-script'
