@@ -8,6 +8,10 @@ if has('nvim')
   " Language plugins for deoplete
   Plug 'zchee/deoplete-jedi' " Python
   Plug 'sebastianmarkow/deoplete-rust' " Rust
+  Plug 'c9s/perlomni.vim' " Perl
+  Plug 'zchee/deoplete-clang' " C/C++
+  Plug 'landaire/deoplete-d' " D-Lang
+  Plug 'wokalski/autocomplete-flow' " Javascript
 
 
 endif
@@ -34,6 +38,7 @@ Plug 'udalov/kotlin-vim'
 Plug 'elorest/vim-slang'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'JesseKPhillips/d.vim'
+Plug 'jdonaldson/vaxe'
 
 " ruby on rails
 Plug 'thoughtbot/vim-rspec'
