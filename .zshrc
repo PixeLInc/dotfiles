@@ -16,6 +16,9 @@ alias vim=nvim
 # set the term
 export TERM=xterm-256color
 
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
 # SSH-AGENT STUFF
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
   eval `ssh-agent`
