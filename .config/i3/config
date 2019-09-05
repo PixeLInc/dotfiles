@@ -74,7 +74,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+#bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -172,6 +172,9 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioStop exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# TAKE A DAMN SCREENSHOT.
+bindsym Print exec flameshot gui
 
 # class                 border backgr. text indicator child_border
 client.focused          #7289DA #7289DA #ffffff #7289DA   #202020

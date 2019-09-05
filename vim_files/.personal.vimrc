@@ -6,3 +6,6 @@ let delimitMate_expand_cr=1
 
 set relativenumber
 nnoremap <silent> <F8> :set nonumber!<CR>:set relativenumber!<CR>:GitGutterToggle<CR>
+
+" Crystal Formatter
+let g:crystal_auto_format = 1
