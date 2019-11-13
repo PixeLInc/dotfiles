@@ -2,19 +2,36 @@ call plug#begin($HOME . '/.vim/plugged')
 
 " Neovim
 if has('nvim')
+  " Deoplete sucks.
   " Autocompletion plugin
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-  " Language plugins for deoplete
-  Plug 'zchee/deoplete-jedi' " Python
-  Plug 'sebastianmarkow/deoplete-rust' " Rust
-  Plug 'c9s/perlomni.vim' " Perl
-  Plug 'zchee/deoplete-clang' " C/C++
-  Plug 'landaire/deoplete-d' " D-Lang
-  Plug 'wokalski/autocomplete-flow' " Javascript
+  " " Language plugins for deoplete
+  " Plug 'zchee/deoplete-jedi' " Python
+  " Plug 'sebastianmarkow/deoplete-rust' " Rust
+  "  Plug 'racer-rust/vim-racer' " Rust
+  " Plug 'c9s/perlomni.vim' " Perl
+  " Plug 'zchee/deoplete-clang' " C/C++
+  " Plug 'landaire/deoplete-d' " D-Lang
+  " Plug 'wokalski/autocomplete-flow' " Javascript
+  " Plug 'HarrisonB/deoplete-crystal' " Crystal
+  " Plug 'fishbullet/deoplete-ruby' " Ruby
 
+  " " Sources
+  " Plug 'uplus/deoplete-solargraph'
+  " Plug 'SirVer/ultisnips'
+  " Plug 'autozimu/LanguageClient-neovim', {
+  " \ 'branch': 'next',
+  " \ 'do': 'bash install.sh',
+  " \ }
+  "  Plug 'w0rp/ale'
 
+  " Markdown
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 endif
+
+" Autocomplete
+Plug 'Valloric/YouCompleteMe'
 
 " dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
