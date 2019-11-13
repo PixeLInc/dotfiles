@@ -32,13 +32,16 @@ call deoplete#custom#source('_',
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " set sources
-"let g:deoplete#sources = {}
 "let g:deoplete#sources.cpp = ['LanguageClient']
 "let g:deoplete#sources.python = ['LanguageClient']
 "let g:deoplete#sources.python3 = ['LanguageClient']
 "let g:deoplete#sources.rust = ['LanguageClient']
 "let g:deoplete#sources.c = ['LanguageClient']
 "let g:deoplete#sources.vim = ['vim']
+
+let g:deoplete#sources = {}
+let g:deoplete#sources.ruby = ['tag', 'LanguageClient', 'buffer', 'file', 'ultisnips']
+let g:deoplete#sources.rust = ['ale', 'racer', 'LanguageClient']
 
 " deoplete-racer config
 
