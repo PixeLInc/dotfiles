@@ -1,102 +1,23 @@
 call plug#begin($HOME . '/.vim/plugged')
 
-" Neovim
-if has('nvim')
-  " Deoplete sucks.
-  " Autocompletion plugin
-  " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-  " " Language plugins for deoplete
-  " Plug 'zchee/deoplete-jedi' " Python
-  " Plug 'sebastianmarkow/deoplete-rust' " Rust
-  "  Plug 'racer-rust/vim-racer' " Rust
-  " Plug 'c9s/perlomni.vim' " Perl
-  " Plug 'zchee/deoplete-clang' " C/C++
-  " Plug 'landaire/deoplete-d' " D-Lang
-  " Plug 'wokalski/autocomplete-flow' " Javascript
-  " Plug 'HarrisonB/deoplete-crystal' " Crystal
-  " Plug 'fishbullet/deoplete-ruby' " Ruby
-
-  " " Sources
-  " Plug 'uplus/deoplete-solargraph'
-  " Plug 'SirVer/ultisnips'
-  " Plug 'autozimu/LanguageClient-neovim', {
-  " \ 'branch': 'next',
-  " \ 'do': 'bash install.sh',
-  " \ }
-  "  Plug 'w0rp/ale'
-
-  " Markdown
-  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-endif
-
-" Autocomplete
-Plug 'Valloric/YouCompleteMe'
-
 " dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tpope/vim-projectionist'
 Plug 'tomtom/tlib_vim'
-
-" language plugins
-Plug 'rodjek/vim-puppet'
-Plug 'tpope/vim-markdown'
-Plug 'vim-perl/vim-perl'
-Plug 'elixir-lang/vim-elixir'
-Plug 'fatih/vim-go'
-Plug 'slashmili/alchemist.vim'
-Plug 'vim-erlang/vim-erlang-runtime'
-Plug 'vim-scripts/gmlua.vim'
-Plug 'wmayner/python3-syntax'
-Plug 'rhysd/vim-crystal'
-Plug 'bfrg/vim-cpp-modern'
-Plug 'NLKNguyen/c-syntax.vim'
-Plug 'udalov/kotlin-vim'
-Plug 'elorest/vim-slang'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'JesseKPhillips/d.vim'
-Plug 'jdonaldson/vaxe'
-
-" ruby on rails
-Plug 'thoughtbot/vim-rspec'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
-
-" front end web development
-Plug 'jelera/vim-javascript-syntax'
-Plug 'mxw/vim-jsx'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'elzr/vim-json'
-Plug 'kchmck/vim-coffee-script'
-Plug 'burnettk/vim-angular'
-Plug 'othree/html5.vim'
-Plug 'tpope/vim-haml'
-
-" user text objects
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
-
-" vim helpers
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/syntastic'
-Plug 'Lokaltog/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
-Plug 'junegunn/vim-easy-align'
 Plug 'haya14busa/incsearch.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'mtth/scratch.vim'
 Plug 'terryma/vim-multiple-cursors'
-
-" tpope
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -104,25 +25,37 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-speeddating'
-
-" tmux
-Plug 'christoomey/vim-tmux-navigator'
-
-" quick searching
-if executable('ag')
-  Plug 'rking/ag.vim'
-elseif executable('ack')
-  Plug 'mileszs/ack.vim'
-endif
+Plug 'ycm-core/YouCompleteMe'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " color themes
 Plug 'nanotech/jellybeans.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-colorscheme-switcher'
+
+Plug 'morhetz/gruvbox'
 Plug 'tomasr/molokai'
-Plug 'chriskempson/base16-vim'
+Plug 'dracula/vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'sonph/onehalf'
+Plug 'jnurmine/Zenburn'
+Plug 'gosukiwi/vim-atom-dark'
+Plug 'jacoborus/tender.vim'
+Plug 'sjl/badwolf'
+Plug 'ciaranm/inkpot'
+Plug 'mhartington/oceanic-next'
+Plug 'kyoz/purify'
+Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'connorholyday/vim-snazzy'
+Plug 'arcticicestudio/nord-vim'
+Plug 'relastle/bluewery.vim'
+
+" Langs
+Plug 'vim-crystal/vim-crystal'
+Plug 'elixir-editors/vim-elixir'
+Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
