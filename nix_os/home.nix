@@ -27,6 +27,7 @@
     pkgs.rustup
     pkgs.gnupg
     pkgs.pinentry-curses
+    pkgs.tmux
   ];
 
   # vscode pls.
