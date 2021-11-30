@@ -70,7 +70,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
    environment.systemPackages = with pkgs; [
-     neovim
+     vim
      wget
      curl
      python3
@@ -106,7 +106,6 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "21.05"; # Did you read the comment?
 
-  # idk if I need this
   programs.ssh.startAgent = true;
 
   # ducker pls

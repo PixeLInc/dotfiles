@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  unstable = import <nixos-unstable> {};
+in
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -28,6 +31,7 @@
     pkgs.gnupg
     pkgs.pinentry-curses
     pkgs.tmux
+    unstable.neovim
   ];
 
   # vscode pls.
@@ -53,15 +57,10 @@
     userEmail = "no@no.no";
   };
 
-  # neovim aliases pls.
-  nixpkgs.overlays = [
-    (self: super: {
-      neovim = super.neovim.override {
-        viAlias = true;
-        vimAlias = true;
-      };
-    })
-  ];
+  programs.bash.shellAliases = {
+    vi = "nvim";
+    vim = "nvim";
+  };
 
   # --- end config ---
 
