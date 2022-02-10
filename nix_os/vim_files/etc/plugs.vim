@@ -14,24 +14,28 @@ Plug 'majutsushi/tagbar'
 Plug 'haya14busa/incsearch.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'mtth/scratch.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-commentary'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim' "focus mode pls.
 
 " color themes
 Plug 'morhetz/gruvbox'
+Plug 'srcery-colors/srcery-vim'
 
 " Langs
 Plug 'vim-crystal/vim-crystal'
 Plug 'LnL7/vim-nix'
+
+" random qol
+Plug 'ap/vim-css-color'
+
+" autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
