@@ -6,56 +6,36 @@ Plug 'tomtom/tlib_vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
-"Plug 'vim-airline/vim-airline'
 Plug 'itchyny/lightline.vim'
-"Plug 'vim-airline/vim-airline-themes'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'haya14busa/incsearch.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'mtth/scratch.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-commentary'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-unimpaired'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim' "focus mode pls.
 
 " color themes
-Plug 'nanotech/jellybeans.vim'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-colorscheme-switcher'
-
 Plug 'morhetz/gruvbox'
-Plug 'tomasr/molokai'
-Plug 'dracula/vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'sonph/onehalf'
-Plug 'jnurmine/Zenburn'
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'jacoborus/tender.vim'
-Plug 'sjl/badwolf'
-Plug 'ciaranm/inkpot'
-Plug 'mhartington/oceanic-next'
-Plug 'kyoz/purify'
-Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'connorholyday/vim-snazzy'
-Plug 'arcticicestudio/nord-vim'
-Plug 'relastle/bluewery.vim'
+Plug 'srcery-colors/srcery-vim'
 
 " Langs
 Plug 'vim-crystal/vim-crystal'
-Plug 'elixir-editors/vim-elixir'
-Plug 'neovimhaskell/haskell-vim'
+Plug 'LnL7/vim-nix'
+
+" random qol
+Plug 'ap/vim-css-color'
+
+" autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
