@@ -1,0 +1,20 @@
+{
+  "tsserver.npm": "/usr/bin/npm",
+  "languageserver": {
+    "odin": {
+      "command": "ols",
+      "filetypes": ["odin"],
+      "rootPatterns": ["ols.json"]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    }
+  },
+  "clangd.fallbackFlags": ["-std=c++17"],
+  "elixir.pathToElixirLS": "/mnt/backup_s/coding/git/elixir-ls/release/language_server.sh"
+}

@@ -1,0 +1,25 @@
+return {
+  "ntpeters/vim-better-whitespace",
+  "airblade/vim-gitgutter",
+  "haya14busa/is.vim",
+  "itchyny/lightline.vim",
+  "Raimondi/delimitMate",
+  "terryma/vim-expand-region",
+  "mtth/scratch.vim",
+  "tpope/vim-surround",
+  "tpope/vim-endwise",
+  "tpope/vim-fugitive",
+  "tpope/vim-vinegar",
+  "junegunn/fzf",
+  "junegunn/fzf.vim",
+  "junegunn/goyo.vim",
+  "ap/vim-css-color",
+  {
+    "mg979/vim-visual-multi",
+    branch = "master",
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
+}
