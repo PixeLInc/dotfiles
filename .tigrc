@@ -3,8 +3,8 @@ set main-view-date = custom
 set main-view-date-format = "%Y-%m-%d"
 set main-view = date:relative author:full commit-title:graph=true,refs=true
 set diff-view = line-number:display=false text:commit-title-overflow=true
-# set diff-options = --pretty=short
-set vertical-split = true
+#set diff-options = --pretty=short
+# set vertical-split = false
 set git-colors = no
 set truncation-delimiter  = ~   # Character drawn for truncations, or "utf-8"
 
@@ -83,24 +83,25 @@ color "gpg: "                       72          default
 color "Primary key fingerprint: "   72          default
 
 # grep view
-color grep.file         208       default               bold
-color grep.line-number        241       default         bold
-color grep.delimiter        241        default         bold
-color delimiter            142      default         bold
+color grep.file			        	208     	default         bold
+color grep.line-number		        241     	default         bold
+color grep.delimiter		        241	        default         bold
+color delimiter			            142     	default         bold
 
 # lines in digraph
-color palette-0              166       default         bold
-color palette-1             66        default         bold
-color palette-2                       172        default         bold
-color palette-3                   132        default         bold
-color palette-4             72                default         bold
-color palette-5             106        default         bold
-color palette-6             124        default              bold
-color palette-7             250        default         bold
+color palette-0		            	166     	default         bold
+color palette-1		            	66	        default         bold
+color palette-2		            	172	        default         bold
+color palette-3		            	132	        default         bold
+color palette-4		            	72	        default         bold
+color palette-5		            	106	        default         bold
+color palette-6		            	124	        default         bold
+color palette-7		            	250	        default         bold
 # repeat
-color palette-8             166        default
-color palette-9              66        default
-color palette-10              172                 default
-color palette-11              132        default
-color palette-12              72        default
-color palette-13                  106        default
+color palette-8		            	166	        default
+color palette-9		            	66	        default
+color palette-10	            	172	        default
+color palette-11	            	132	        default
+color palette-12	            	72	        default
+color palette-13	            	106	        default
+# source /home/pixel/Documents/tig_lighttheme.tigrc
