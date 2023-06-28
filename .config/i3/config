@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
-# set $mod Mod4
+#set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -31,7 +31,8 @@ font pango:inconsolata 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+# bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -168,10 +169,15 @@ bindsym $mod+r mode "resize"
 bindsym $mod+shift+x exec bash /home/pixel/.config/i3lock/lock
 
 # media controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioStop exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+# bindsym XF86AudioPlay exec playerctl play
+# bindsym XF86AudioStop exec playerctl pause
+# bindsym XF86AudioNext exec playerctl next
+#bindsym XF86AudioPrev exec playerctl previous
+
+bindsym $mod+Insert exec "playerctl --player=spotify,firefox play"
+bindsym $mod+Delete exec "playerctl --player=spotify,firefox pause"
+bindsym $mod+Home exec "playerctl --player=spotify,firefox next"
+bindsym $mod+End exec "playerctl --player=spotify,firefox previous"
 
 # TAKE A DAMN SCREENSHOT.
 bindsym Print exec flameshot gui
@@ -191,7 +197,16 @@ client.background #ffffff
         # i3bar_command $HOME/.config/polybar/launch.sh
 # }
 
+mode "passthrough" {
+    bindsym Mod1+Alt_L mode "default"
+}
+bindsym Mod1+Alt_L mode "passthrough"
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id bash $HOME/Documents/arander_script.sh
-exec --no-startup-id xcompmgr -n
-exec --no-startup-id feh --bg-scale /home/pixel/bg.jpg
+exec_always --no-startup-id dunst
+exec --no-startup-id imwheel -b 45
+exec --no-startup-id xinput --set-prop "Glorious Model D" 'libinput Accel Speed' -0.6
+exec --no-startup-id bash $HOME/.screenlayout/main.sh
+exec --no-startup-id flameshot
+#exec --no-startup-id xcompmgr -n
+#exec --no-startup-id feh --bg-scale /home/pixel/elon.jpg
