@@ -75,8 +75,6 @@ set formatoptions-=cro
 
 set timeoutlen=300
 
-" fuck you. this breaks everything.
-" set ttimeoutlen=0
 set pastetoggle=<F7>
 
 nnoremap <space> :
@@ -173,7 +171,7 @@ nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>Q :q!<CR>
 
 " F8 to toggle line numbers and git-gutter
-nnoremap <silent> <F8> :set nonumber!<CR>norelativenumber!<CR>:GitGutterToggle<CR>
+nnoremap <silent> <F8> :set nonumber!<CR>:set relativenumber!<CR>:GitGutterToggle<CR>
 
 " F9 to Toggle list (display unprintable characters)
 nnoremap <silent> <F9> :set list!<CR>
@@ -214,9 +212,6 @@ let delimitMate_expand_cr=1
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
-
-set relativenumber
-nnoremap <silent> <F8> :set nonumber!<CR>:set relativenumber!<CR>:GitGutterToggle<CR>
 
 
 " Crystal Formatter
