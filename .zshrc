@@ -100,6 +100,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+HISTSIZE=500000
+SAVEHIST=500000
+
+# share between terms
+setopt SHARE_HISTORY
+# dont store things starting with space
+setopt HIST_IGNORE_SPACE
+# immediately append rather than wait till term exit
+setopt INC_APPEND_HISTORY
+# ignore CTRL+D from closing terminal
+setopt IGNORE_EOF
+
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
@@ -113,6 +125,10 @@ alias spcomp="/mnt/games/Servers/csgo_surf/csgo/addons/sourcemod/scripting/spcom
 
 # . "$HOME/.cargo/env"
 PATH="$HOME/.cargo/bin:$PATH"
+
+
+# ocaml
+[[ ! -r /home/pixel/.opam/opam-init/init.zsh ]] || source /home/pixel/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # prompt changing :)
 autoload -Uz vcs_info
