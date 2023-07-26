@@ -204,6 +204,9 @@ endif
 
 " personal configs
 
+" Show both git changes and line number in the same column instead of removing line numbers..
+set signcolumn=yes
+
 " File stuff
 au FileType c setl sw=4 sts=4 et
 au FileType cpp setl sw=4 sts=4 et
