@@ -14,6 +14,7 @@ return {
   "junegunn/fzf.vim",
   "junegunn/goyo.vim",
   "ap/vim-css-color",
+  "eandrju/cellular-automaton.nvim",
   {
     "mg979/vim-visual-multi",
     branch = "master",

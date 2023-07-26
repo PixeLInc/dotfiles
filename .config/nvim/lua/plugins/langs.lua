@@ -6,6 +6,7 @@ return {
   "lepture/vim-jinja",
   "ziglang/zig.vim",
   "rust-lang/rust.vim",
+  "ocaml/vim-ocaml",
   {
     "fatih/vim-go",
     build = ":GoUpdateBinaries",

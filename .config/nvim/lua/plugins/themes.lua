@@ -13,5 +13,5 @@ return {
   "Everblush/everblush.vim",
   "PixeLInc/zengarden",
   "rebelot/kanagawa.nvim",
-  "https://gitlab.com/madyanov/gruber.vim",
+  "PixeLInc/gruber-darker-vim",
 }
