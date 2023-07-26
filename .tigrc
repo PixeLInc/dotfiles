@@ -105,3 +105,6 @@ color palette-11	            	132	        default
 color palette-12	            	72	        default
 color palette-13	            	106	        default
 # source /home/pixel/Documents/tig_lighttheme.tigrc
+
+bind main    [    !git commit --edit --file=.git/COMMIT_EDITMSG
+bind status  [    !git commit --edit --file=.git/COMMIT_EDITMSG
