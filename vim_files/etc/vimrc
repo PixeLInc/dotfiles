@@ -131,6 +131,8 @@ nnoremap <silent> <leader>p :Files<CR>
 nnoremap <silent> <leader>P :FZF<CR>
 nnoremap <silent> <leader>c :Commits<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --glob=!.git/'
+
 
 " settings
 nnoremap <leader>a :Rg<space>
