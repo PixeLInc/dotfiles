@@ -234,7 +234,8 @@ endif
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 set background=dark
-colorscheme zengarden
+"colorscheme zengarden
+colorscheme GruberDarker
 
 " Move fzf window to middle of screen + bigger
 let g:fzf_preview_window = 'right:50%'
