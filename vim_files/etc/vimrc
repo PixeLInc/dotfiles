@@ -237,6 +237,12 @@ set background=dark
 "colorscheme zengarden
 colorscheme GruberDarker
 
+" This is obnoxious.
+" If there is an <i> it will be italic, if there is an <a> it will be underlined.
+" I really don't want my text to reflect the elements.. please stop.
+let html_no_rendering = 1
+
+
 " Move fzf window to middle of screen + bigger
 let g:fzf_preview_window = 'right:50%'
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6  }  }
@@ -257,3 +263,4 @@ function! GoyoToggle()
     let g:goyo_open = 1
   endif
 endfunction
+
