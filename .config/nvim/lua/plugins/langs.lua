@@ -7,6 +7,9 @@ return {
   "ziglang/zig.vim",
   "rust-lang/rust.vim",
   "ocaml/vim-ocaml",
+  "ericvw/vim-nim",
+  "jdonaldson/vaxe",
+  "teal-language/vim-teal",
   {
     "fatih/vim-go",
     build = ":GoUpdateBinaries",
