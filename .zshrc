@@ -125,6 +125,11 @@ alias spcomp="/mnt/games/Servers/csgo_surf/csgo/addons/sourcemod/scripting/spcom
 
 # . "$HOME/.cargo/env"
 PATH="$HOME/.cargo/bin:$PATH"
+PATH="$HOME/.nimble/bin:$PATH"
+PATH="$HOME/.luarocks/bin:$PATH"
+
+# Load Z
+. ~/.local/bin/z.sh
 
 
 # ocaml
