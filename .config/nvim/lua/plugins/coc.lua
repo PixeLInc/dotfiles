@@ -18,6 +18,17 @@ M.config = function()
   -- dont pass messages to |ins-completion-menu|
   -- vim.opt.shortmess += "c"
 
+  -- extensions that I use
+  vim.g.coc_global_extensions = {
+    'coc-tsserver',
+    'coc-rust-analyzer',
+    'coc-pyright',
+    'coc-go',
+    'coc-elixir',
+    'coc-dlang',
+    'coc-clangd',
+  }
+
   local keyset = vim.keymap.set
 
   -- Autocomplete
