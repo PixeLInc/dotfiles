@@ -15,7 +15,15 @@ T='#ee00eeee'  # text
 W='#880000bb'  # wrong
 V='#bb00bbbb'  # verifying
 
+# IDEALLY this would revert to previous settings which it fetches at run
+# buuuut, that's too much effort :)
+revert() {
+  xset s off -dpms
+}
+trap revert HUP INT TERM
+
 i3lock \
+-n \
 --insidever-color=$C   \
 --ringver-color=$V     \
 \
@@ -44,9 +52,5 @@ i3lock \
 --keylayout 2         \
 --verif-text="annnnd..." \
 --wrong-text="Nope!"
-# --textsize=20
-# --modsize=10
-# --timefont=comic-sans
-# --datefont=monofur
-# etc
 
+revert
