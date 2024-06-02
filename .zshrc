@@ -112,10 +112,16 @@ setopt INC_APPEND_HISTORY
 # ignore CTRL+D from closing terminal
 setopt IGNORE_EOF
 
+setopt HIST_IGNORE_DUPS       # Don't record if just happened
+setopt HIST_IGNORE_ALL_DUPS   # Delete an old event if new one is duplicated
+setopt HIST_FIND_NO_DUPS      # Don't display a previously found one
+setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate event before others when trimming
+
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+PATH="$HOME/.nimble/bin:$PATH"
 export PATH
 
 export TERM=xterm-256color
@@ -127,13 +133,15 @@ alias spcomp="/mnt/games/Servers/csgo_surf/csgo/addons/sourcemod/scripting/spcom
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.nimble/bin:$PATH"
 PATH="$HOME/.luarocks/bin:$PATH"
+PATH="/etc/eselect/wine/bin:$PATH"
+PATH="$HOME/go/bin:$PATH"
 
 # Load Z
 . ~/.local/bin/z.sh
 
 
 # ocaml
-[[ ! -r /home/pixel/.opam/opam-init/init.zsh ]] || source /home/pixel/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+#[[ ! -r /home/pixel/.opam/opam-init/init.zsh ]] || source /home/pixel/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # prompt changing :)
 autoload -Uz vcs_info
@@ -151,3 +159,9 @@ zstyle :omz:plugins:ssh-agent identities id_ed25519
 setopt PROMPT_SUBST
 PROMPT='%F{219}%n%F{white}@%F{177}%m %F{121}$(shrink_path -f) %F{117}${vcs_info_msg_0_}%f$ '
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/pixel/.gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/pixel/.gcloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/pixel/.gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/pixel/.gcloud/google-cloud-sdk/completion.zsh.inc'; fi

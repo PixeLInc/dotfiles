@@ -10,6 +10,8 @@ return {
   "ericvw/vim-nim",
   "jdonaldson/vaxe",
   "teal-language/vim-teal",
+  "https://git.sr.ht/~sircmpwn/hare.vim",
+  "gleam-lang/gleam.vim",
   {
     "fatih/vim-go",
     build = ":GoUpdateBinaries",

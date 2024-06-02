@@ -15,9 +15,16 @@
       "command": "opam",
       "args": ["config", "exec", "--", "ocamllsp"],
       "filetypes": ["ocaml", "reason"]
+    },
+    "gleam": {
+      "command": "gleam",
+      "args": ["lsp"],
+      "filetypes": ["gleam"],
+      "rootPatterns": ["gleam.toml"]
     }
   },
+  "coc.preferences.formatOnSaveFiletypes": ["gleam"],
   "rust-analyzer.server.path": "/home/pixel/.cargo/bin/rust-analyzer",
   "elixir.pathToElixirLS": "/mnt/backup_s/coding/git/elixir-ls/release/language_server.sh",
-  "zig.zls.path": "/home/pixel/.config/coc/extensions/coc-zls-data/zls_install/zls"
+  "zig.path": "/home/pixel/.local/bin/zls"
 }

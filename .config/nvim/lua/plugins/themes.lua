@@ -14,4 +14,6 @@ return {
   "PixeLInc/zengarden",
   "rebelot/kanagawa.nvim",
   "PixeLInc/gruber-darker-vim",
+  "nyoom-engineering/oxocarbon.nvim",
+  "sainnhe/sonokai",
 }
