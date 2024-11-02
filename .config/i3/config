@@ -222,6 +222,8 @@ exec --no-startup-id xinput --set-prop "Glorious Model D" 'libinput Accel Speed'
 exec --no-startup-id bash $HOME/.screenlayout/main.sh
 exec --no-startup-id gentoo-pipewire-launcher
 exec --no-startup-id flameshot
-exec --no-startup-id setxkbmap us,se -option '' -option grp:ctrls_toggle -option kpdl:dot
+exec --no-startup-id setxkbmap us,se -variant ' ,swerty'  -option '' -option grp:ctrls_toggle -option kpdl:dot
+exec --no-startup-id xrdb -load ~/.Xdefaults
+exec --no-startup-id xmousepasteblock
 
 for_window [class="steam"] move to workspace $ws9
