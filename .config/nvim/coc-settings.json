@@ -24,7 +24,7 @@
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["gleam"],
-  "rust-analyzer.server.path": "/home/pixel/.cargo/bin/rust-analyzer",
   "elixir.pathToElixirLS": "/mnt/backup_s/coding/git/elixir-ls/release/language_server.sh",
-  "zig.path": "/home/pixel/.local/bin/zls"
+  "zig.path": "/usr/bin/zls",
+  "inlayHint.enable": false
 }
