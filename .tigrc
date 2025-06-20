@@ -3,6 +3,8 @@ set main-view-date = custom
 set main-view-date-format = "%Y-%m-%d"
 set main-view = date:relative author:full commit-title:graph=true,refs=true
 set diff-view = line-number:display=false text:commit-title-overflow=true
+
+set ignore-case = smart-case
 #set diff-options = --pretty=short
 # set vertical-split = false
 set git-colors = no
