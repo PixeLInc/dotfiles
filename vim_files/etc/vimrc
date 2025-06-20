@@ -75,7 +75,7 @@ set formatoptions-=cro
 
 set timeoutlen=300
 
-set pastetoggle=<F7>
+"set pastetoggle=<F7>
 
 nnoremap <space> :
 nnoremap <silent> \ ,
