@@ -110,7 +110,7 @@ setopt HIST_IGNORE_SPACE
 # immediately append rather than wait till term exit
 setopt INC_APPEND_HISTORY
 # ignore CTRL+D from closing terminal
-setopt IGNORE_EOF
+# setopt IGNORE_EOF
 
 setopt HIST_IGNORE_DUPS       # Don't record if just happened
 setopt HIST_IGNORE_ALL_DUPS   # Delete an old event if new one is duplicated
