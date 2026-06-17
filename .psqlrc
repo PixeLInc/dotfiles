@@ -2,11 +2,12 @@
 \x auto
 \timing
 \set COMP_KEYWORD_CASE upper
-\set PROMPT1 '%[%033[1m%]%M %n@%/%R%[%033[0m%]%# '
+\set PROMPT1 '%[%033[1m%]%M:%> %n@%/%R%[%033[0m%]%[%033[1;33m%]%x%[%033[0m%]%# '
 \set PROMPT2 '[more] %R > '
 \set VERBOSITY verbose
 \set HISTSIZE 10000
 \set HISTFILE ~/.psql_history- :DBNAME
 \set HISTCONTROL ignoredups
 \pset null '(null)'
+\pset format wrapped
 \unset QUIET

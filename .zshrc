@@ -165,3 +165,7 @@ if [ -f '/home/pixel/.gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/pix
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/pixel/.gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/pixel/.gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+
+jwt-decode() {
+  jq -R 'split(".") |.[0:2] | map(gsub("-"; "+") | gsub("_"; "/") | gsub("%3D"; "=") | @base64d) | map(fromjson)' <<< $1
+}

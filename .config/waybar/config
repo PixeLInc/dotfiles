@@ -1,0 +1,82 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", // Waybar at top layer
+    "height": 8, // Waybar height (to be removed for auto height)
+    "spacing": 1, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "niri/workspaces",
+        "niri/window",
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "disk",
+        "niri/language",
+        "cpu",
+        "memory",
+        "network",
+        "clock#local",
+        "clock#utc",
+        "tray"
+    ],
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock#local": {
+        "interval": 1,
+        "format": "{:%R %Z}",
+        //"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "",
+        "format-alt": "{:%a %b %d, %Y %H:%M:%S %p %Z}",
+        "timezones": ["America/Chicago"],
+        "tooltip": false,
+        "actions": {
+          "on-click-middle": "tz_up",
+        },
+    },
+    "clock#utc": {
+        "interval": 1,
+        "format": "{:%R %Z}",
+        "format-alt": "{:%a %b %d, %Y %H:%M:%S %p %Z}",
+        "timezones": ["UTC"],
+        "tooltip": false,
+        "actions": {
+          "on-click-middle": "tz_up",
+        },
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "CPU {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 1,
+        "format": "WAM {used}/{total}GiB",
+        "tooltip": false,
+    },
+    "network": {
+        "interval": 1,
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "interface": "enp16s0",
+        "format": "",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname} {ipaddr}  -  {bandwidthDownBits:>5}    {bandwidthUpBits:>5}  ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "min-length": 20,
+    },
+    "disk": {
+      "interval": 5,
+      "format": "{percentage_used}% {path}",
+      "path": "/"
+    },
+    "niri/language": {
+      "format": "{short}",
+    },
+
+    "reload_style_on_change": true,
+}
