@@ -21,10 +21,19 @@
       "args": ["lsp"],
       "filetypes": ["gleam"],
       "rootPatterns": ["gleam.toml"]
+    },
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["gleam"],
   "elixir.pathToElixirLS": "/mnt/backup_s/coding/git/elixir-ls/release/language_server.sh",
   "zig.path": "/usr/bin/zls",
-  "inlayHint.enable": false
+  "inlayHint.enable": false,
+  "svelte.enable-ts-plugin": true
 }

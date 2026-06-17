@@ -215,6 +215,10 @@ au FileType sourcepawn setl sw=2 sts=2 noexpandtab
 au FileType sourcepawn setlocal makeprg=/mnt/games/Servers/csgo_surf/csgo/addons/sourcemod/scripting/spcomp64
 let delimitMate_expand_cr=1
 
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
+au BufRead,BufNewFile mix.lock set filetype=elixir
+
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
@@ -289,7 +293,7 @@ function! GoyoToggle()
     Goyo!
     let g:goyo_open = 0
   else
-    Goyo 120x100%
+    Goyo 65%x100%
     set number relativenumber
     let g:goyo_open = 1
   endif

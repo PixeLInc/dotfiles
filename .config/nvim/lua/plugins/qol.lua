@@ -11,8 +11,10 @@ return {
   "tpope/vim-fugitive",
   "tpope/vim-vinegar",
   "tpope/vim-sleuth",
-  "junegunn/fzf",
-  "junegunn/fzf.vim",
+  {
+    "junegunn/fzf.vim",
+    dependencies = { "junegunn/fzf", build = "./install --bin"},
+  },
   "junegunn/goyo.vim",
   "ap/vim-css-color",
   "eandrju/cellular-automaton.nvim",

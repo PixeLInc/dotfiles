@@ -12,6 +12,7 @@ return {
   "teal-language/vim-teal",
   "https://git.sr.ht/~sircmpwn/hare.vim",
   "gleam-lang/gleam.vim",
+  "rluba/jai.vim",
   {
     "fatih/vim-go",
     build = ":GoUpdateBinaries",
@@ -19,5 +20,9 @@ return {
   {
     "evanleck/vim-svelte",
     branch = "main",
+    dependencies = {
+      "othree/html5.vim",
+      "pangloss/vim-javascript"
+    }
   },
 }
